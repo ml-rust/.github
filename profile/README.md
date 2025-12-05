@@ -12,7 +12,7 @@ ml-rust aims to build an integrated ecosystem where each component is designed t
 
 ## Projects
 
-### [oxidizr](https://github.com/farhan-syah/oxidizr)
+### [oxidizr](https://github.com/ml-rust/oxidizr)
 
 **LLM training framework with next-generation architectures**
 
@@ -32,7 +32,7 @@ oxidizr is the core training engine of the ml-rust ecosystem, designed for resea
 
 ---
 
-### [blazr](https://github.com/farhan-syah/blazr)
+### [blazr](https://github.com/ml-rust/blazr)
 
 **High-performance inference server with OpenAI-compatible API**
 
@@ -51,7 +51,7 @@ blazr bridges the gap between experimental architectures and production deployme
 
 ---
 
-### [splintr](https://github.com/farhan-syah/splintr)
+### [splintr](https://github.com/ml-rust/splintr)
 
 **High-performance BPE tokenizer with Python bindings**
 
@@ -63,6 +63,7 @@ A Byte-Pair Encoding tokenizer built for speed and compatibility. Supports all m
 - **Agent tokens** (54 tokens for chat, reasoning, tool-use)
 
 Performance optimizations include:
+
 - PCRE2 with JIT compilation (2-4x faster than fancy-regex)
 - Rayon parallelism for batch encoding
 - LRU caching for repeated chunks
@@ -75,13 +76,14 @@ splintr provides the tokenization layer for both oxidizr training and blazr infe
 
 ---
 
-### [regexr](https://github.com/farhan-syah/regexr)
+### [regexr](https://github.com/ml-rust/regexr)
 
 **Specialized pure-Rust regex engine for LLM tokenization**
 
 A purpose-built regex engine designed specifically for tokenization workloads—not a general-purpose regex library. While Rust has the excellent `regex` crate for general use, regexr fills a specific gap: **lookarounds + JIT compilation + pure Rust**.
 
 **Why regexr exists:**
+
 - `regex` crate: Fast, safe, but lacks lookarounds (by design, for linear-time guarantee)
 - `fancy-regex`: Supports lookarounds, but no JIT compilation
 - `pcre2`: Full features with JIT, but requires C bindings
@@ -89,6 +91,7 @@ A purpose-built regex engine designed specifically for tokenization workloads—
 regexr provides lookarounds, backreferences, and JIT compilation while remaining 100% Rust with no C dependencies.
 
 **Multiple execution backends** automatically selected based on pattern characteristics:
+
 - **ShiftOr / JitShiftOr** - Bit-parallel matching for small patterns
 - **LazyDFA / DFA JIT** - General patterns with SIMD prefiltering (Teddy/AVX2)
 - **PikeVM / TaggedNfa** - Lookaround and non-greedy quantifiers
@@ -124,17 +127,20 @@ Each component can be used independently, but they're designed to work seamlessl
 ## Roadmap
 
 **Completed**:
+
 - regexr with JIT compilation and SIMD acceleration (production-ready for tokenization use cases)
 - splintr tokenizer with tiktoken, Llama 3, DeepSeek V3 support (10-12x faster than tiktoken)
 - Mamba2/Mamba3 training pipeline in oxidizr with CUDA and multi-GPU support
 - blazr inference server with OpenAI-compatible API and streaming
 
 **In Progress** (Q1 2026):
+
 - Distributed training support in oxidizr
 - Quantization and optimization in blazr (INT8, FP16)
 - End-to-end training-to-deployment documentation
 
 **Planned** (2026+):
+
 - Additional architectures (Attention-free models, hybrid SSMs)
 - Browser-based inference via WebAssembly
 - Expanded vocabulary support (Qwen, Gemini, Command-R)
@@ -168,10 +174,10 @@ We welcome contributors, early adopters, and feedback from the community.
 
 Each project has its own documentation and examples:
 
-- **oxidizr**: See [oxidizr/README.md](https://github.com/farhan-syah/oxidizr) for training guide
-- **blazr**: See [blazr/README.md](https://github.com/farhan-syah/blazr) for server setup
-- **splintr**: See [splintr/README.md](https://github.com/farhan-syah/splintr) for tokenization examples
-- **regexr**: See [regexr/README.md](https://github.com/farhan-syah/regexr) for regex engine details
+- **oxidizr**: See [oxidizr/README.md](https://github.com/ml-rust/oxidizr) for training guide
+- **blazr**: See [blazr/README.md](https://github.com/ml-rust/blazr) for server setup
+- **splintr**: See [splintr/README.md](https://github.com/ml-rust/splintr) for tokenization examples
+- **regexr**: See [regexr/README.md](https://github.com/ml-rust/regexr) for regex engine details
 
 ## Community
 
