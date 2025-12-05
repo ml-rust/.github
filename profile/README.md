@@ -1,4 +1,4 @@
-# ml-rust
+# Machine Learning in Rust
 
 **Building a complete machine learning ecosystem in Rust**
 
