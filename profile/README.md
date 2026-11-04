@@ -23,6 +23,7 @@ Machine learning infrastructure in Rust, from tensors to inference servers. The 
 | [venus](https://github.com/ml-rust/venus) | Reactive notebooks for Rust, stored as plain `.rs` files. |
 | [axp](https://github.com/ml-rust/axp) | Open protocol that gives AI agents a sandbox to run code and tools. |
 | [cargo-reclaim](https://github.com/ml-rust/cargo-reclaim) | Background companion to `cargo clean` for large Rust projects. |
+| [ml-rust.github.io](https://github.com/ml-rust/ml-rust.github.io) | [Catalogue](https://ml-rust.github.io) of Rust ML libraries and apps, with tiers from published rules. |
 
 ## How they fit
 
