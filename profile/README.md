@@ -10,6 +10,7 @@ Machine learning infrastructure in Rust, from tensors to inference servers. The 
 | [oxidizr](https://github.com/ml-rust/oxidizr) | LLM training for Mamba, MLA, MoE, and hybrid models. |
 | [voxr](https://github.com/ml-rust/voxr) | Audio and speech on boostr: decoding, TTS, ASR, and VAD. |
 | [vidr](https://github.com/ml-rust/vidr) | Video: codecs, hardware decode and encode, filters, and models on the GPU, as a library. |
+| [containr](https://github.com/ml-rust/containr) | Media containers for vidr and voxr: MP4/MOV and Matroska/WebM, read and write. |
 | [compressr](https://github.com/ml-rust/compressr) | Model conversion and quantization between SafeTensors and GGUF. |
 | [boostr](https://github.com/ml-rust/boostr) | ML framework on numr: attention, MoE, Mamba, quantization, model loaders. |
 | [numr](https://github.com/ml-rust/numr) | Tensors, linear algebra, and FFT on CPU, CUDA, and WebGPU. |
@@ -36,6 +37,7 @@ numr
     └── compressr  conversion
 
 splintr, regexr    tokenization, used by boostr and blazr
+containr           media containers, for vidr and voxr
 ```
 
 ## Start
